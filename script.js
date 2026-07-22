@@ -13,6 +13,8 @@ const metricSunset = document.querySelector(".weather-block__metric-sunset");
 const hourlyList = document.querySelector(".hourly-list");
 const notification = document.querySelector(".notification")
 
+const apiKey = CONFIG.WEATHER_API_KEY;
+
 let activeIndex = 1
 
 let data = JSON.parse(localStorage.getItem("data")) || ""
@@ -100,7 +102,7 @@ function updateWeather() {
 async function getData(city) {
   try {
     const response = await fetch(
-      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${yesterday}/${tomorrow}?unitGroup=metric&key=4MWVDT6FX3NQEFHDB4VLAR58L&contentType=json&lang=ru`
+      `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${yesterday}/${tomorrow}?unitGroup=metric&key=${apiKey}&contentType=json&lang=ru`
     );
     if (!response.ok) {
       if (response.status === 400) {
