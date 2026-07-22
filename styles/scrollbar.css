@@ -1,0 +1,21 @@
+.hourly-list {
+  scrollbar-width: thin;
+  scrollbar-color: #46576f transparent;
+}
+
+.hourly-list::-webkit-scrollbar {
+  height: 4px;
+}
+
+.hourly-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hourly-list::-webkit-scrollbar-thumb {
+  background: #1a2535;
+  border-radius: 999px;
+}
+
+.hourly-list::-webkit-scrollbar-thumb:hover {
+  background: #344b6c;
+}

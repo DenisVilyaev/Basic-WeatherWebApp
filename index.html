@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/scrollbar.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <input type="text" placeholder="⌕ Москва" class="input" />
+        <div class="tabs">
+          <button class="tab" data-index="0">Вчера</button>
+          <button class="tab tab--active" data-index="1">Сегодня</button>
+          <button class="tab" data-index="2">Завтра</button>
+        </div>
+        <button class="hourly-list-toggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 8l4 4-4 4M6 16l-4-4 4-4M2 12h20" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="content">
+        <div id="main-info">
+          <div class="weather-block">
+            <div class="conditions-main">
+              <div class="conditions-date">Четверг | 9 июля</div>
+              <span class="conditions conditions-temp">+25&deg;</span>
+              <span class="conditions conditions-desc">Солнечно</span>
+              <span class="conditions-minmax"
+                >Макс: +27&deg; | Мин: +15&deg;</span
+              >
+            </div>
+            <img src="svg/clear-day.svg" alt="" class="weather-block__icon" />
+          </div>
+
+          <div class="weather-block__metrics">
+            <div class="weather-block__metric">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9.59 4.59A2 2 0 1 1 11 8H2" />
+                  <path d="M12.59 19.41A2 2 0 1 0 14 16H2" />
+                  <path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2" />
+                </svg>
+              </span>
+              <span class="weather-block__metric-wind">3 м/с</span>
+            </div>
+            <div class="weather-block__metric">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 13v8M8 13v8M12 15v8M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"
+                  />
+                </svg>
+              </span>
+              <span class="weather-block__metric-prob">3%</span>
+            </div>
+            <div class="weather-block__metric">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-sunrise-icon lucide-sunrise"
+                >
+                  <path d="M12 2v8" />
+                  <path d="m4.93 10.93 1.41 1.41" />
+                  <path d="M2 18h2" />
+                  <path d="M20 18h2" />
+                  <path d="m19.07 10.93-1.41 1.41" />
+                  <path d="M22 22H2" />
+                  <path d="m8 6 4-4 4 4" />
+                  <path d="M16 18a4 4 0 0 0-8 0" />
+                </svg>
+              </span>
+              <span class="weather-block__metric-sunrise">05:45</span>
+            </div>
+            <div class="weather-block__metric">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-sunset-icon lucide-sunset"
+                >
+                  <path d="M12 10V2" />
+                  <path d="m4.93 10.93 1.41 1.41" />
+                  <path d="M2 18h2" />
+                  <path d="M20 18h2" />
+                  <path d="m19.07 10.93-1.41 1.41" />
+                  <path d="M22 22H2" />
+                  <path d="m16 6-4 4-4-4" />
+                  <path d="M16 18a4 4 0 0 0-8 0" />
+                </svg>
+              </span>
+              <span class="weather-block__metric-sunset">20:29</span>
+            </div>
+          </div>
+
+          <div class="hourly-list">
+            <!-- <div class="hourly-list__card">
+              <div class="hourly-list__card-time">00:00</div>
+              <img src="svg/clear-night.svg" alt="" class="hourly-list__icon" />
+              <div class="hourly-list__card-temp">+17&deg;</div>
+              <div class="hourly-list__card-feelslike">1%</div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <div class="notification"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
